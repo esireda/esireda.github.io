@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://eriseda.com/posts/f1840eab.html</loc>
+    
+    <lastmod>2021-11-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://eriseda.com/posts/3cc49a3.html</loc>
+    
+    <lastmod>2021-11-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://eriseda.com/posts/749ad7d8.html</loc>
     
-    <lastmod>2021-11-08</lastmod>
+    <lastmod>2021-11-10</lastmod>
     
   </url>
   
@@ -88,15 +102,22 @@
 
   <url>
     <loc>http://eriseda.com/</loc>
-    <lastmod>2021-11-08</lastmod>
+    <lastmod>2021-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://eriseda.com/tags/hexo%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-11-08</lastmod>
+    <loc>http://eriseda.com/tags/docker/</loc>
+    <lastmod>2021-11-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://eriseda.com/tags/sql%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2021-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -105,7 +126,14 @@
   
   <url>
     <loc>http://eriseda.com/categories/docker/</loc>
-    <lastmod>2021-11-08</lastmod>
+    <lastmod>2021-11-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://eriseda.com/categories/ctf/</loc>
+    <lastmod>2021-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
