@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://eriseda.com/posts/3e51555a.html</loc>
+    
+    <lastmod>2021-11-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://eriseda.com/posts/6f6b5e7f.html</loc>
+    
+    <lastmod>2021-11-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://eriseda.com/posts/f1840eab.html</loc>
+    
+    <lastmod>2021-11-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://eriseda.com/posts/749ad7d8.html</loc>
     
     <lastmod>2021-11-10</lastmod>
@@ -10,13 +31,6 @@
   
   <url>
     <loc>http://eriseda.com/posts/3cc49a3.html</loc>
-    
-    <lastmod>2021-11-10</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://eriseda.com/posts/f1840eab.html</loc>
     
     <lastmod>2021-11-10</lastmod>
     
@@ -102,7 +116,7 @@
 
   <url>
     <loc>http://eriseda.com/</loc>
-    <lastmod>2021-11-10</lastmod>
+    <lastmod>2021-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -110,14 +124,21 @@
   
   <url>
     <loc>http://eriseda.com/tags/docker/</loc>
-    <lastmod>2021-11-10</lastmod>
+    <lastmod>2021-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://eriseda.com/tags/sql%E6%B3%A8%E5%85%A5/</loc>
-    <lastmod>2021-11-10</lastmod>
+    <lastmod>2021-11-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://eriseda.com/tags/kali/</loc>
+    <lastmod>2021-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -126,14 +147,21 @@
   
   <url>
     <loc>http://eriseda.com/categories/docker/</loc>
-    <lastmod>2021-11-10</lastmod>
+    <lastmod>2021-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://eriseda.com/categories/ctf/</loc>
-    <lastmod>2021-11-10</lastmod>
+    <lastmod>2021-11-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://eriseda.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2021-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

@@ -6,7 +6,7 @@
   <link href="http://eriseda.com/atom.xml" rel="self"/>
   
   <link href="http://eriseda.com/"/>
-  <updated>2021-11-10T15:24:25.882Z</updated>
+  <updated>2021-11-12T08:02:18.134Z</updated>
   <id>http://eriseda.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kali配置镜像源及升级软件源</title>
+    <link href="http://eriseda.com/posts/6f6b5e7f.html"/>
+    <id>http://eriseda.com/posts/6f6b5e7f.html</id>
+    <published>2021-11-12T08:00:00.000Z</published>
+    <updated>2021-11-12T08:02:18.134Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="配置镜像源"><a href="#配置镜像源" class="headerlink" title="配置镜像源"></a>配置镜像源</h2><p>1，输入以下命令</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">vim /etc/apt/sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>2，按insert键进行编写，将原有的镜像源用#号注释掉或删除。</p><p>在最后面填入这三个镜像源中的一个.</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#中科大deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib#阿里云deb http://mirrors.aliyun.com/kali kali-rolling main non-free contribdeb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib#清华大学deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-freedeb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="升级软件源"><a href="#升级软件源" class="headerlink" title="升级软件源"></a>升级软件源</h2><p>镜像源配置完以后就可以升级软件源了</p><p>1，输入以下命令</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">apt-get update &amp;&amp; apt-get upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>2，等待升级完就ok了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;配置镜像源&quot;&gt;&lt;a href=&quot;#配置镜像源&quot; class=&quot;headerlink&quot; title=&quot;配置镜像源&quot;&gt;&lt;/a&gt;配置镜像源&lt;/h2&gt;&lt;p&gt;1，输入以下命令&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-shell&quot; data</summary>
+      
+    
+    
+    
+    <category term="环境配置" scheme="http://eriseda.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="kali" scheme="http://eriseda.com/tags/kali/"/>
+    
+  </entry>
   
   <entry>
     <title>docker部署</title>
@@ -46,12 +71,31 @@
     <link href="http://eriseda.com/posts/f1840eab.html"/>
     <id>http://eriseda.com/posts/f1840eab.html</id>
     <published>2021-11-01T08:00:00.000Z</published>
-    <updated>2021-11-10T12:36:42.176Z</updated>
+    <updated>2021-11-11T13:33:08.333Z</updated>
     
     <content type="html"><![CDATA[<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">(1)python sqlmap.py-u“url” #检测目标网站是否存在注入(2)python sqlmap.py-u“url”--dbs #获取对方数据库所有库的名称(3)python sqlmap.py-u “url” -D “security"--tables #获取security库下的表(4)python sqlmap.py-u “url” -D “securtiy"-T “emails,users" --columns #获取eamil表，users表中的字段(5)python sqlmap.py -u“url” -D“securtiy"-T “uses" -C“id,username,password” --dump#导出数据指定数据(6)python sqlmap.py-u“url”--dump-all#拖库(7)python sqlmap.py-u"url"--current-user #获取当前用户名称(8)python sqlmap.py -u “url” --current-db#获取当前使用的数据名称(9)python sqlmap-r 1.txt #指定文件检测注入(10)python sqlmap-u“url”--dbms“mysql”#指定数据库类型进行检测(11)python sqlmap-r 1.txt-p“参数名”#post型注入，-p指定哪个参数注入(12)python sqlmap -u“url”--forms#自动搜索表单 并测试注入(13)python sqlmap-u“url”-dbs-v4#显示sqlmap注入的信息有七个等级默认是一 0、只显示python错误以及严重的信息。1、同时显示基本信息和警告信息。(默认)2、同时显示debug信息。3、同时显示注入的payload4、同时显示HTTP请求。5、同时显示HTTP响应头。6、同时显示HTTP响应页面(14)python sqlmap-U“url”--tamper unmagicquotes#检测宽字节注入(15)python sqlmap-u“url”-is-dba #判断当前用户是否为数据库管理员权限(16)python sqlmap -u“url”--random-agent #随机UA头(17)探测等级参数：-level共有五个等级，默认为1级..这个参数不仅影响使用哪些payload同时也会影响测试的注入点，GET和POST的数据都会测试，HTTP Cookie在level为2的时候就会测试，HTTPUser-Agent/Referer头在level为3的时候就会测试。总之在你不确定哪个payload或者参数为注入点的时候，为了保证全面性，建议使用高的level值。python sqlmap.py -u“url”--cookie "cookie value"--level 2(18)风险等级参数：-risk共有四个风险等级，默认是1会测试大部分的测试语句，2会增加基于事件的测试语句，3会增加OR语句的SQL注入测试。在有些时候，例如在UPDATE的语句中，注入一个OR的测试语句，可能导致更新的整个表，可能造成很大的风险。(19)python sqlmap.py-u“url”--users#列数据库用户(20)python sqlmap.py-u“url”-batch #采用默认配置对提示进行设置(21)python sqlmap.py-u"url"-roles 或者--privileges #列用户以及权限(22)伪静态注入：使用sqlmap进行伪静态注入python sqlmap -u"www.xx.com/index.php/news/id/203*.html"python sqlmap -u"www.xx.com/index.php/news/id/10*"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
     
     
-    <summary type="html">sqlmap的简单的使用</summary>
+    <summary type="html">sqlmap的一些命令</summary>
+    
+    
+    
+    <category term="ctf" scheme="http://eriseda.com/categories/ctf/"/>
+    
+    
+    <category term="sql注入" scheme="http://eriseda.com/tags/sql%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sqllab关卡以及相关知识</title>
+    <link href="http://eriseda.com/posts/3e51555a.html"/>
+    <id>http://eriseda.com/posts/3e51555a.html</id>
+    <published>2021-11-01T08:00:00.000Z</published>
+    <updated>2021-11-12T08:04:36.570Z</updated>
+    
+    
+    <summary type="html">sqllab</summary>
     
     
     
