@@ -33,7 +33,7 @@
       <link href="/posts/3cc49a3.html"/>
       <url>/posts/3cc49a3.html</url>
       
-        <content type="html"><![CDATA[<h2 id="Ngnix部署"><a href="#Ngnix部署" class="headerlink" title="Ngnix部署"></a>Ngnix部署</h2><p>docker run -it </p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Ngnix部署"><a href="#Ngnix部署" class="headerlink" title="Ngnix部署"></a>Ngnix部署</h1><h2 id="1，拉取镜像"><a href="#1，拉取镜像" class="headerlink" title="1，拉取镜像"></a>1，拉取镜像</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker pull ngnix<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="2，运行容器"><a href="#2，运行容器" class="headerlink" title="2，运行容器"></a>2，运行容器</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker run -it --name [nginx01] -p 3344:80 nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="3，进入nginx容器"><a href="#3，进入nginx容器" class="headerlink" title="3，进入nginx容器"></a>3，进入nginx容器</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker exec -it nginx01 /bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
       
       
       <categories>
