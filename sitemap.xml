@@ -144,6 +144,13 @@
 
   
   <url>
+    <loc>http://eriseda.com/tags/cs/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://eriseda.com/tags/docker/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
@@ -152,13 +159,6 @@
   
   <url>
     <loc>http://eriseda.com/tags/kali/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://eriseda.com/tags/cs/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -181,6 +181,13 @@
 
   
   <url>
+    <loc>http://eriseda.com/categories/%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://eriseda.com/categories/docker/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
@@ -189,13 +196,6 @@
   
   <url>
     <loc>http://eriseda.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://eriseda.com/categories/%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
