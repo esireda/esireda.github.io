@@ -202,14 +202,14 @@
   </url>
   
   <url>
-    <loc>http://eriseda.com/categories/python/</loc>
+    <loc>http://eriseda.com/categories/ctf/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://eriseda.com/categories/ctf/</loc>
+    <loc>http://eriseda.com/categories/python/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
