@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/posts/0.html"/>
+      <url>/posts/0.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="一，-极客大挑战-2019-Http"><a href="#一，-极客大挑战-2019-Http" class="headerlink" title="一，[极客大挑战 2019]Http"></a>一，[极客大挑战 2019]Http</h2><h2 id="1，打开题目："><a href="#1，打开题目：" class="headerlink" title="1，打开题目："></a>1，打开题目：</h2><p><img src="https://cdn.jsdelivr.net/gh/esireda/tupian/image-20220408233017991.png" alt="image-20220408233017991"></p><h2 id="2，brup抓包"><a href="#2，brup抓包" class="headerlink" title="2，brup抓包"></a>2，brup抓包</h2><p><img src="https://cdn.jsdelivr.net/gh/esireda/tupian/image-20220408233128405.png" alt="image-20220408233128405"></p><p>发现：Secret.php 文件</p><h2 id="3，发送repeater，"><a href="#3，发送repeater，" class="headerlink" title="3，发送repeater，"></a>3，发送repeater，</h2><p><img src="https://cdn.jsdelivr.net/gh/esireda/tupian/image-20220408233557851.png" alt="image-20220408233557851"></p><h2 id="4，使用referer更改网页来源"><a href="#4，使用referer更改网页来源" class="headerlink" title="4，使用referer更改网页来源"></a>4，使用referer更改网页来源</h2><p><img src="https://cdn.jsdelivr.net/gh/esireda/tupian/image-20220408233918065.png" alt="image-20220408233918065"></p><h2 id="5，更改浏览器信息为：Syclover"><a href="#5，更改浏览器信息为：Syclover" class="headerlink" title="5，更改浏览器信息为：Syclover"></a>5，更改浏览器信息为：Syclover</h2><p><img src="https://cdn.jsdelivr.net/gh/esireda/tupian/image-20220408234102844.png" alt="image-20220408234102844"></p><h2 id="6，还未结束，locally！！伪造一下本地请求XXF"><a href="#6，还未结束，locally！！伪造一下本地请求XXF" class="headerlink" title="6，还未结束，locally！！伪造一下本地请求XXF"></a>6，还未结束，locally！！伪造一下本地请求XXF</h2><p><img src="https://cdn.jsdelivr.net/gh/esireda/tupian/image-20220408234405744.png" alt="image-20220408234405744"></p><p>此时已经得到flag，但是要注意的是xxf时 get请求需要后面有两个空行，也是红线划的部分。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>华为的一些命令</title>
       <link href="/posts/48b7eb9e.html"/>
       <url>/posts/48b7eb9e.html</url>
