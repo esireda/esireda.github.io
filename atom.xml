@@ -6,7 +6,7 @@
   <link href="http://eriseda.com/atom.xml" rel="self"/>
   
   <link href="http://eriseda.com/"/>
-  <updated>2022-07-22T09:48:58.377Z</updated>
+  <updated>2022-07-22T09:56:38.257Z</updated>
   <id>http://eriseda.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>kali配置镜像源及升级软件源</title>
-    <link href="http://eriseda.com/posts/6f6b5e7f.html"/>
-    <id>http://eriseda.com/posts/6f6b5e7f.html</id>
+    <title>tomcat cve-2017-12615漏洞复现</title>
+    <link href="http://eriseda.com/posts/fbb07966.html"/>
+    <id>http://eriseda.com/posts/fbb07966.html</id>
     <published>2022-07-20T08:00:00.000Z</published>
-    <updated>2022-07-22T09:48:58.377Z</updated>
+    <updated>2022-07-22T09:56:38.257Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一，tomcat-cve-2017-12615漏洞复现"><a href="#一，tomcat-cve-2017-12615漏洞复现" class="headerlink" title="一，tomcat cve-2017-12615漏洞复现"></a>一，tomcat cve-2017-12615漏洞复现</h1><h2 id="1，首先使用docker搭建一个vulhub（官网：vulhub-org）集成环境。"><a href="#1，首先使用docker搭建一个vulhub（官网：vulhub-org）集成环境。" class="headerlink" title="1，首先使用docker搭建一个vulhub（官网：vulhub.org）集成环境。"></a>1，首先使用docker搭建一个vulhub（官网：vulhub.org）集成环境。</h2><pre class="line-numbers language-none"><code class="language-none">git clone https://github.com/vulhub/vulhub.git <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="2，切换vulhub的目录下，找到需要复现的漏洞（本次是tomcat-cve-2017-12615）切换到该漏洞目录下。"><a href="#2，切换vulhub的目录下，找到需要复现的漏洞（本次是tomcat-cve-2017-12615）切换到该漏洞目录下。" class="headerlink" title="2，切换vulhub的目录下，找到需要复现的漏洞（本次是tomcat cve-2017-12615）切换到该漏洞目录下。"></a>2，切换vulhub的目录下，找到需要复现的漏洞（本次是tomcat cve-2017-12615）切换到该漏洞目录下。</h2><h2 id="3，输入docker命令，搭建tomcat"><a href="#3，输入docker命令，搭建tomcat" class="headerlink" title="3，输入docker命令，搭建tomcat"></a>3，输入docker命令，搭建tomcat</h2><pre class="line-numbers language-none"><code class="language-none">docker-compose up -d <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="4，默认端口8080，（检查好端口是否被占用）"><a href="#4，默认端口8080，（检查好端口是否被占用）" class="headerlink" title="4，默认端口8080，（检查好端口是否被占用）"></a>4，默认端口8080，（检查好端口是否被占用）</h2><p><img src="https://cdn.jsdeliver.net/gh/esireda/tupian/image-20220722171924581.png" alt="image-20220722171924581"></p><h2 id="5，利用burp抓包，发送repeater"><a href="#5，利用burp抓包，发送repeater" class="headerlink" title="5，利用burp抓包，发送repeater"></a>5，利用burp抓包，发送repeater</h2><p><img src="https://cdn.jsdeliver.net/gh/esireda/tupian/image-20220722172021209.png" alt="image-20220722172021209"></p><h2 id="6，使用PUT协议进行写入文件，但此时由于tomcat会对jsq后缀进行校验，所以需要在文件名结尾处加入-20-进行绕过"><a href="#6，使用PUT协议进行写入文件，但此时由于tomcat会对jsq后缀进行校验，所以需要在文件名结尾处加入-20-进行绕过" class="headerlink" title="6，使用PUT协议进行写入文件，但此时由于tomcat会对jsq后缀进行校验，所以需要在文件名结尾处加入%20 进行绕过"></a>6，使用PUT协议进行写入文件，但此时由于tomcat会对jsq后缀进行校验，所以需要在文件名结尾处加入%20 进行绕过</h2><p><img src="https://cdn.jsdeliver.net/gh/esireda/tupian/image-20220722174306742.png" alt="image-20220722174306742"></p><h2 id="7，此时可以发现jsq文件已经成功上传成功。"><a href="#7，此时可以发现jsq文件已经成功上传成功。" class="headerlink" title="7，此时可以发现jsq文件已经成功上传成功。"></a>7，此时可以发现jsq文件已经成功上传成功。</h2>]]></content>
     
