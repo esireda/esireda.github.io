@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">华为的一些命令 | eriseda</title>
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/esireda/tupian/favicon.gif">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "小记同学eriseda";
+  mashiro_option.author_name = "eriseda";
+  mashiro_option.site_url = "http://eriseda.cn";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="http://eriseda.cn">
+          <img src="https://cdn.jsdelivr.net/gh/esireda/tupian/111.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Can you vivo me 50？</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/esireda" target="_blank" class="social-github" title="github">
+                    <img src="/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="email">
+                    <img src="/images/social/1.jpg">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="/image/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">小记同学</span>
+            <span class="shironeko">eriseda</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/ctf/">
+                          <i class="fa fa-solid fa-gamepad" aria-hidden="true"></i>
+                          ctf
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/docker/">
+                          <i class="fa fa-brands fa-docker" aria-hidden="true"></i>
+                          docker
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/漏洞/">
+                          <i class="fa fa-solid fa-bug" aria-hidden="true"></i>
+                          漏洞
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/python/">
+                          <i class="fa python" aria-hidden="true"></i>
+                          python
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/学习/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          学习
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/client/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                    客户端
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/esireda/tupian/t01ed23ae29d4abd20d.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/esireda/tupian/t01ed23ae29d4abd20d.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      华为的一些命令</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="">
+          </a>
+        </span>
+        <span>
+          <a href="">eriseda</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-3-29<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="一，华为的一些命令"><a href="#一，华为的一些命令" class="headerlink" title="一，华为的一些命令"></a>一，华为的一些命令</h1><h3 id="1，配置交换机名称和密文密码："><a href="#1，配置交换机名称和密文密码：" class="headerlink" title="1，配置交换机名称和密文密码："></a>1，配置交换机名称和密文密码：</h3><h1 id="system-view-进入系统视图配置"><a href="#system-view-进入系统视图配置" class="headerlink" title="system-view  //进入系统视图配置"></a>system-view  //进入系统视图配置</h1><h1 id="quit或return-退出系统视图"><a href="#quit或return-退出系统视图" class="headerlink" title="quit或return  //退出系统视图"></a>quit或return  //退出系统视图</h1><h1 id="sysname-xxx-设置主机名"><a href="#sysname-xxx-设置主机名" class="headerlink" title="sysname xxx  //设置主机名"></a>sysname xxx  //设置主机名</h1><h1 id="user-interface-console-0-进入控制台"><a href="#user-interface-console-0-进入控制台" class="headerlink" title="user-interface console 0 //进入控制台"></a>user-interface console 0 //进入控制台</h1><h1 id="authentication-mode-password-登陆时需要密码验证"><a href="#authentication-mode-password-登陆时需要密码验证" class="headerlink" title="authentication-mode password  //登陆时需要密码验证"></a>authentication-mode password  //登陆时需要密码验证</h1><h1 id="set-authentication-password-cipher-xxx-配置密文密码"><a href="#set-authentication-password-cipher-xxx-配置密文密码" class="headerlink" title="set authentication password cipher xxx  //配置密文密码"></a>set authentication password cipher xxx  //配置密文密码</h1><h3 id="2，配置交换机的远程管理ip地址："><a href="#2，配置交换机的远程管理ip地址：" class="headerlink" title="2，配置交换机的远程管理ip地址："></a>2，配置交换机的远程管理ip地址：</h3><h1 id="interface-Vlanif-1-进入VLAN1"><a href="#interface-Vlanif-1-进入VLAN1" class="headerlink" title="interface Vlanif 1  //进入VLAN1"></a>interface Vlanif 1  //进入VLAN1</h1><h1 id="ip-add-192-168-1-254-24-配置ip"><a href="#ip-add-192-168-1-254-24-配置ip" class="headerlink" title="ip add 192.168.1.254 24 //配置ip"></a>ip add 192.168.1.254 24 //配置ip</h1><h1 id="undo-shutdown-开启接口"><a href="#undo-shutdown-开启接口" class="headerlink" title="undo shutdown //开启接口"></a>undo shutdown //开启接口</h1><h1 id="dns-domain-xxx-com-设置域名"><a href="#dns-domain-xxx-com-设置域名" class="headerlink" title="dns domain xxx.com   //设置域名"></a>dns domain xxx.com   //设置域名</h1><h1 id="dns-server-192-168-254-254-取消提示信息"><a href="#dns-server-192-168-254-254-取消提示信息" class="headerlink" title="dns server 192.168.254.254  //取消提示信息"></a>dns server 192.168.254.254  //取消提示信息</h1><h1 id="dis-vlan-显示vlan-save保存设置"><a href="#dis-vlan-显示vlan-save保存设置" class="headerlink" title="dis vlan 显示vlan     save保存设置"></a>dis vlan 显示vlan     save保存设置</h1><h1 id="dis-curr-显示当前配置-reboot重启设备"><a href="#dis-curr-显示当前配置-reboot重启设备" class="headerlink" title="dis curr  显示当前配置  reboot重启设备"></a>dis curr  显示当前配置  reboot重启设备</h1><h1 id="undo-terminal-monitor-取消提示信息"><a href="#undo-terminal-monitor-取消提示信息" class="headerlink" title="undo terminal monitor   //取消提示信息"></a>undo terminal monitor   //取消提示信息</h1><h3 id="3，配置交换机端口速率，双工，ARP："><a href="#3，配置交换机端口速率，双工，ARP：" class="headerlink" title="3，配置交换机端口速率，双工，ARP："></a>3，配置交换机端口速率，双工，ARP：</h3><h1 id="int-g0-0-1-进入接口"><a href="#int-g0-0-1-进入接口" class="headerlink" title="int g0/0/1   //进入接口"></a>int g0/0/1   //进入接口</h1><h1 id="description-xxx-端口描述"><a href="#description-xxx-端口描述" class="headerlink" title="description xxx  //端口描述"></a>description xxx  //端口描述</h1><h1 id="undo-negotiation-auto-取消协商"><a href="#undo-negotiation-auto-取消协商" class="headerlink" title="undo negotiation auto  //取消协商"></a>undo negotiation auto  //取消协商</h1><h1 id="duplex-full-全双工"><a href="#duplex-full-全双工" class="headerlink" title="duplex full  //全双工"></a>duplex full  //全双工</h1><h1 id="auto-duplex-full-自动"><a href="#auto-duplex-full-自动" class="headerlink" title="auto duplex full //自动"></a>auto duplex full //自动</h1><h1 id="speed-10-速率10m"><a href="#speed-10-速率10m" class="headerlink" title="speed 10 //速率10m"></a>speed 10 //速率10m</h1><h1 id="auto-speed-100-自动"><a href="#auto-speed-100-自动" class="headerlink" title="auto speed 100 //自动"></a>auto speed 100 //自动</h1><h1 id="arp-static-192-168-1-8-5499-98cf-2603-绑定mac地址"><a href="#arp-static-192-168-1-8-5499-98cf-2603-绑定mac地址" class="headerlink" title="arp static 192.168.1.8 5499-98cf-2603 //绑定mac地址"></a>arp static 192.168.1.8 5499-98cf-2603 //绑定mac地址</h1><h1 id="dis-arp-all-查看arp"><a href="#dis-arp-all-查看arp" class="headerlink" title="dis arp all //查看arp"></a>dis arp all //查看arp</h1><h3 id="4，配置路由器接口ip和静态路由："><a href="#4，配置路由器接口ip和静态路由：" class="headerlink" title="4，配置路由器接口ip和静态路由："></a>4，配置路由器接口ip和静态路由：</h3><h1 id="int-g-0-0-1-进入接口"><a href="#int-g-0-0-1-进入接口" class="headerlink" title="int g/0/0/1//进入接口"></a>int g/0/0/1//进入接口</h1><h1 id="ip-add-192-168-1-6-24-配置ip地址"><a href="#ip-add-192-168-1-6-24-配置ip地址" class="headerlink" title="ip add 192.168.1.6 24 //配置ip地址"></a>ip add 192.168.1.6 24 //配置ip地址</h1><h1 id="dis-cur-或-Huiwei-dis-cur-两种模式下都可查看arp"><a href="#dis-cur-或-Huiwei-dis-cur-两种模式下都可查看arp" class="headerlink" title="dis cur   或 [Huiwei]dis cur  //两种模式下都可查看arp"></a><huawei>dis cur   或 [Huiwei]dis cur  //两种模式下都可查看arp</huawei></h1><h3 id="5，配置静态路由："><a href="#5，配置静态路由：" class="headerlink" title="5，配置静态路由："></a>5，配置静态路由：</h3><h1 id="ip-route-static-192-168-20-0-24-10-0-12-2"><a href="#ip-route-static-192-168-20-0-24-10-0-12-2" class="headerlink" title="ip route-static 192.168.20.0 24 10.0.12.2"></a>ip route-static 192.168.20.0 24 10.0.12.2</h1><h1 id="ip-route-static-192-168-10-0-24-serial-0-0-1-可选出口"><a href="#ip-route-static-192-168-10-0-24-serial-0-0-1-可选出口" class="headerlink" title="ip route-static 192.168.10.0 24 serial 0/0/1 //可选出口"></a>ip route-static 192.168.10.0 24 serial 0/0/1 //可选出口</h1><h1 id="ip-route-static-0-0-0-0-0-192-168-1-5-默认路由"><a href="#ip-route-static-0-0-0-0-0-192-168-1-5-默认路由" class="headerlink" title="ip route-static 0.0.0.0 0 192.168.1.5  //默认路由"></a>ip route-static 0.0.0.0 0 192.168.1.5  //默认路由</h1><h1 id="dispaly-ip-routing-table-查看路由表"><a href="#dispaly-ip-routing-table-查看路由表" class="headerlink" title="dispaly ip routing-table   //查看路由表"></a>dispaly ip routing-table   //查看路由表</h1><h3 id="6，配置交换vlan相关命令："><a href="#6，配置交换vlan相关命令：" class="headerlink" title="6，配置交换vlan相关命令："></a>6，配置交换vlan相关命令：</h3><h1 id="vlan-10-创建vlan"><a href="#vlan-10-创建vlan" class="headerlink" title="vlan 10 //创建vlan"></a>vlan 10 //创建vlan</h1><h1 id="description-xxx-vlan描述"><a href="#description-xxx-vlan描述" class="headerlink" title="description xxx  //vlan描述"></a>description xxx  //vlan描述</h1><h1 id="vlan-batch-30-50-创建多个不连续vlan"><a href="#vlan-batch-30-50-创建多个不连续vlan" class="headerlink" title="vlan batch 30 50 //创建多个不连续vlan"></a>vlan batch 30 50 //创建多个不连续vlan</h1><h1 id="vlan-batch-2-to-20-创建连续vlan"><a href="#vlan-batch-2-to-20-创建连续vlan" class="headerlink" title="vlan batch 2 to 20 //创建连续vlan"></a>vlan batch 2 to 20 //创建连续vlan</h1><h1 id="int-g0-0-1-进入接口-1"><a href="#int-g0-0-1-进入接口-1" class="headerlink" title="int g0/0/1  //进入接口"></a>int g0/0/1  //进入接口</h1><h1 id="port-link-type-access-访问口"><a href="#port-link-type-access-访问口" class="headerlink" title="port link-type access //访问口"></a>port link-type access //访问口</h1><h1 id="port-default-vlan-10-加入vlan"><a href="#port-default-vlan-10-加入vlan" class="headerlink" title="port default vlan 10 //加入vlan"></a>port default vlan 10 //加入vlan</h1><h1 id="port-link-type-trunk-干道口"><a href="#port-link-type-trunk-干道口" class="headerlink" title="port link-type trunk //干道口"></a>port link-type trunk //干道口</h1><h1 id="port-trunk-allow-pass-vlan-10-20-允许通过的vlan口"><a href="#port-trunk-allow-pass-vlan-10-20-允许通过的vlan口" class="headerlink" title="port trunk allow-pass vlan 10 20 //允许通过的vlan口"></a>port trunk allow-pass vlan 10 20 //允许通过的vlan口</h1><h1 id="port-trunk-allow-pass-all-所有"><a href="#port-trunk-allow-pass-all-所有" class="headerlink" title="port trunk allow-pass all //所有"></a>port trunk allow-pass all //所有</h1><p># </p>
+<h3 id="7，混合模式"><a href="#7，混合模式" class="headerlink" title="7，混合模式"></a>7，混合模式</h3><h1 id="int-e0-0-2-进入接口"><a href="#int-e0-0-2-进入接口" class="headerlink" title="int e0/0/2    //进入接口"></a>int e0/0/2    //进入接口</h1><h1 id="port-link-type-hybrid-混合口模式"><a href="#port-link-type-hybrid-混合口模式" class="headerlink" title="port link-type hybrid  //混合口模式"></a>port link-type hybrid  //混合口模式</h1><h1 id="undo-port-default-vlan-删除默认vlan"><a href="#undo-port-default-vlan-删除默认vlan" class="headerlink" title="undo port default vlan  //删除默认vlan"></a>undo port default vlan  //删除默认vlan</h1><h1 id="port-hybrid-untagged-vlan-20-去标签"><a href="#port-hybrid-untagged-vlan-20-去标签" class="headerlink" title="port hybrid untagged vlan 20 //去标签"></a>port hybrid untagged vlan 20 //去标签</h1><h1 id="port-hybrid-pvid-vlan-2-设置默认vlan"><a href="#port-hybrid-pvid-vlan-2-设置默认vlan" class="headerlink" title="port hybrid pvid vlan 2  //设置默认vlan"></a>port hybrid pvid vlan 2  //设置默认vlan</h1><h1 id="port-trunk-allow-pass-vlan10-to-100-允许通过的vlan口（前面加undo不允许）"><a href="#port-trunk-allow-pass-vlan10-to-100-允许通过的vlan口（前面加undo不允许）" class="headerlink" title="port trunk allow-pass vlan10 to 100  //允许通过的vlan口（前面加undo不允许）"></a>port trunk allow-pass vlan10 to 100  //允许通过的vlan口（前面加undo不允许）</h1><h1 id="dis-port-vlan-查看vlan"><a href="#dis-port-vlan-查看vlan" class="headerlink" title="dis port vlan    //查看vlan"></a>dis port vlan    //查看vlan</h1><h1 id="display-vlan-查看vlan"><a href="#display-vlan-查看vlan" class="headerlink" title="display vlan   //查看vlan"></a>display vlan   //查看vlan</h1><h3 id="8，配置交换机vlan一致性gvrp-：通用vlan注册协议，国际标准。双向注册。"><a href="#8，配置交换机vlan一致性gvrp-：通用vlan注册协议，国际标准。双向注册。" class="headerlink" title="8，配置交换机vlan一致性gvrp ：通用vlan注册协议，国际标准。双向注册。"></a>8，配置交换机vlan一致性gvrp ：通用vlan注册协议，国际标准。双向注册。</h3><h1 id="Normal模式：-（类似cisco交换机服务器模式）"><a href="#Normal模式：-（类似cisco交换机服务器模式）" class="headerlink" title="Normal模式： （类似cisco交换机服务器模式）"></a>Normal模式： （类似cisco交换机服务器模式）</h1><h1 id="Huawei-gvrp-开启gvrp-也是默认模式"><a href="#Huawei-gvrp-开启gvrp-也是默认模式" class="headerlink" title="[Huawei]gvrp //开启gvrp 也是默认模式"></a>[Huawei]gvrp //开启gvrp 也是默认模式</h1><h1 id="Fixed模式：-类似cisco交换机客户机模式"><a href="#Fixed模式：-类似cisco交换机客户机模式" class="headerlink" title="Fixed模式： (类似cisco交换机客户机模式)"></a>Fixed模式： (类似cisco交换机客户机模式)</h1><h1 id="Huawei-g0-0-2-gvrp-registration-fixed"><a href="#Huawei-g0-0-2-gvrp-registration-fixed" class="headerlink" title="[Huawei-g0/0/2]gvrp registration fixed"></a>[Huawei-g0/0/2]gvrp registration fixed</h1><h1 id="Forbidden模式：-类似cisco交换机透明模式"><a href="#Forbidden模式：-类似cisco交换机透明模式" class="headerlink" title="Forbidden模式： (类似cisco交换机透明模式)"></a>Forbidden模式： (类似cisco交换机透明模式)</h1><h1 id="Huawei-g0-0-3-gvrp-registration-forbidden"><a href="#Huawei-g0-0-3-gvrp-registration-forbidden" class="headerlink" title="[Huawei-g0/0/3]gvrp registration forbidden"></a>[Huawei-g0/0/3]gvrp registration forbidden</h1><h1 id="dis-vlan-summary-查看vlan汇总"><a href="#dis-vlan-summary-查看vlan汇总" class="headerlink" title="dis vlan summary //查看vlan汇总"></a>dis vlan summary //查看vlan汇总</h1><h1 id="dis-gvrp-status-查看gvrp状态"><a href="#dis-gvrp-status-查看gvrp状态" class="headerlink" title="dis gvrp status //查看gvrp状态"></a>dis gvrp status //查看gvrp状态</h1><h3 id="9，配置路由器rip协议：ripv1-ripv2"><a href="#9，配置路由器rip协议：ripv1-ripv2" class="headerlink" title="9，配置路由器rip协议：ripv1 ripv2"></a>9，配置路由器rip协议：ripv1 ripv2</h3><h1 id="rip-启用rip默认v1"><a href="#rip-启用rip默认v1" class="headerlink" title="rip    //启用rip默认v1"></a>rip    //启用rip默认v1</h1><h1 id="network-192-168-1-0-发布直连网段"><a href="#network-192-168-1-0-发布直连网段" class="headerlink" title="network 192.168.1.0  //发布直连网段"></a>network 192.168.1.0  //发布直连网段</h1><h1 id="version-2-配置v2版本"><a href="#version-2-配置v2版本" class="headerlink" title="version 2   //配置v2版本"></a>version 2   //配置v2版本</h1><h1 id="dis-rip-查看rip"><a href="#dis-rip-查看rip" class="headerlink" title="dis rip   //查看rip"></a>dis rip   //查看rip</h1><h1 id="dis-rip-database-查看rip数据库"><a href="#dis-rip-database-查看rip数据库" class="headerlink" title="dis rip database    //查看rip数据库"></a>dis rip database    //查看rip数据库</h1><h1 id="dis-rip-routing-table-查看路由表"><a href="#dis-rip-routing-table-查看路由表" class="headerlink" title="dis rip routing-table    //查看路由表"></a>dis rip routing-table    //查看路由表</h1><h1 id="优先级：直连0-静态60-rip100-ospf-10-150"><a href="#优先级：直连0-静态60-rip100-ospf-10-150" class="headerlink" title="优先级：直连0 静态60 rip100 ospf 10/150"></a>优先级：直连0 静态60 rip100 ospf 10/150</h1><h3 id="10，配置路由器ospf协议："><a href="#10，配置路由器ospf协议：" class="headerlink" title="10，配置路由器ospf协议："></a>10，配置路由器ospf协议：</h3><h1 id="Huawei-ospf-启用OSPF默认是进程1"><a href="#Huawei-ospf-启用OSPF默认是进程1" class="headerlink" title="[Huawei]ospf //启用OSPF默认是进程1"></a>[Huawei]ospf //启用OSPF默认是进程1</h1><h1 id="Huawei-ospf-1-area-0-进入区域0"><a href="#Huawei-ospf-1-area-0-进入区域0" class="headerlink" title="[Huawei-ospf-1]area 0 //进入区域0"></a>[Huawei-ospf-1]area 0 //进入区域0</h1><h1 id="Huawei-ospf-1-area-0-0-0-0-network-192-168-3-0-0-0-0-255-发布直连网段"><a href="#Huawei-ospf-1-area-0-0-0-0-network-192-168-3-0-0-0-0-255-发布直连网段" class="headerlink" title="[Huawei-ospf-1-area-0.0.0.0]network 192.168.3.0  0.0.0.255 //发布直连网段"></a>[Huawei-ospf-1-area-0.0.0.0]network 192.168.3.0  0.0.0.255 //发布直连网段</h1><h1 id="Huawei-ospf-1silent-interface-g0-0-2-被动接口"><a href="#Huawei-ospf-1silent-interface-g0-0-2-被动接口" class="headerlink" title="[Huawei-ospf-1silent-interface ]g0/0/2 //被动接口"></a>[Huawei-ospf-1silent-interface ]g0/0/2 //被动接口</h1><h1 id="Huawei-dis-ospf-interface-查看ospf通告"><a href="#Huawei-dis-ospf-interface-查看ospf通告" class="headerlink" title="[Huawei]dis ospf interface //查看ospf通告"></a>[Huawei]dis ospf interface //查看ospf通告</h1><h1 id="Huawei-dis-ospf-peer-查看ospf邻居"><a href="#Huawei-dis-ospf-peer-查看ospf邻居" class="headerlink" title="[Huawei]dis ospf peer //查看ospf邻居"></a>[Huawei]dis ospf peer //查看ospf邻居</h1><h1 id="Huawei-dis-ip-routing-table-查看路由表"><a href="#Huawei-dis-ip-routing-table-查看路由表" class="headerlink" title="[Huawei]dis ip routing-table //查看路由表"></a>[Huawei]dis ip routing-table //查看路由表</h1><h1 id="Huawei-dis-ospf-routing-查看ospf路由表"><a href="#Huawei-dis-ospf-routing-查看ospf路由表" class="headerlink" title="[Huawei]dis ospf routing //查看ospf路由表"></a>[Huawei]dis ospf routing //查看ospf路由表</h1><h3 id="11，配置基于全局的DHCP协议："><a href="#11，配置基于全局的DHCP协议：" class="headerlink" title="11，配置基于全局的DHCP协议："></a>11，配置基于全局的DHCP协议：</h3><h1 id="Huawei-dhcp-enabie-开启dhcp"><a href="#Huawei-dhcp-enabie-开启dhcp" class="headerlink" title="[Huawei]dhcp   enabie //开启dhcp"></a>[Huawei]dhcp   enabie //开启dhcp</h1><h1 id="Huaweijip-pool-dtwlxy-地址池名"><a href="#Huaweijip-pool-dtwlxy-地址池名" class="headerlink" title="[Huaweijip pool dtwlxy //地址池名"></a>[Huaweijip pool dtwlxy //地址池名</h1><h1 id="Huawei-ip-pool-dtwlxy-network-192-168-1-0-地址池"><a href="#Huawei-ip-pool-dtwlxy-network-192-168-1-0-地址池" class="headerlink" title="[Huawei-ip-pool-dtwlxy]network 192.168.1.0//地址池"></a>[Huawei-ip-pool-dtwlxy]network 192.168.1.0//地址池</h1><h1 id="Huawei-ip-pool-dtwlxy-lease-day-2-租约默认1"><a href="#Huawei-ip-pool-dtwlxy-lease-day-2-租约默认1" class="headerlink" title="[Huawei-ip-pool-dtwlxy]lease day 2 //租约默认1"></a>[Huawei-ip-pool-dtwlxy]lease day 2 //租约默认1</h1><h1 id="Huawei-ip-pool-dtwlxy-gateway-list-192-168-1-254-网关，"><a href="#Huawei-ip-pool-dtwlxy-gateway-list-192-168-1-254-网关，" class="headerlink" title="[Huawei-ip-pool-dtwlxy]gateway-list 192.168.1.254     //网关，"></a>[Huawei-ip-pool-dtwlxy]gateway-list 192.168.1.254     //网关，</h1><h1 id="Huawei-ip-pool-dtwlxy-excluded-ip-address-192-168-1-250-192-168-1-253-排除IP范围（这些IP不被发布）"><a href="#Huawei-ip-pool-dtwlxy-excluded-ip-address-192-168-1-250-192-168-1-253-排除IP范围（这些IP不被发布）" class="headerlink" title="[Huawei-ip-pool-dtwlxy]excluded-ip-address 192.168.1.250 192.168.1.253 //排除IP范围（这些IP不被发布）"></a>[Huawei-ip-pool-dtwlxy]excluded-ip-address 192.168.1.250 192.168.1.253 //排除IP范围（这些IP不被发布）</h1><h1 id="Huawei-ip-pool-dtwlxy-dns-list-8-8-8-8-DNS服务器"><a href="#Huawei-ip-pool-dtwlxy-dns-list-8-8-8-8-DNS服务器" class="headerlink" title="[Huawei-ip-pool-dtwlxy]dns-list 8.8.8.8 //DNS服务器["></a>[Huawei-ip-pool-dtwlxy]dns-list 8.8.8.8 //DNS服务器[</h1><h1 id="Huawei-G0-0-0-dhcp-select-global-基于全局。"><a href="#Huawei-G0-0-0-dhcp-select-global-基于全局。" class="headerlink" title="Huawei-G0/0/0]dhcp select global //基于全局。"></a>Huawei-G0/0/0]dhcp select global //基于全局。</h1><h3 id="12，配置基于接口的DHCP协议："><a href="#12，配置基于接口的DHCP协议：" class="headerlink" title="12，配置基于接口的DHCP协议："></a>12，配置基于接口的DHCP协议：</h3><h1 id="Huawei-dhcp-enable-开启dhcp"><a href="#Huawei-dhcp-enable-开启dhcp" class="headerlink" title="[Huawei]dhcp enable //开启dhcp"></a>[Huawei]dhcp enable //开启dhcp</h1><h1 id="Huawei-int-g0-0-1-进入接口"><a href="#Huawei-int-g0-0-1-进入接口" class="headerlink" title="[Huawei]int g0/0/1 //进入接口"></a>[Huawei]int g0/0/1 //进入接口</h1><h1 id="Huawei-G0-0-1-dhcp-select-interface-基于接口"><a href="#Huawei-G0-0-1-dhcp-select-interface-基于接口" class="headerlink" title="[Huawei-G0/0/1]dhcp select interface //基于接口"></a>[Huawei-G0/0/1]dhcp select interface //基于接口</h1><h1 id="Huawei-G0-0-ldhcp-server-lease-day-2-租约默认1"><a href="#Huawei-G0-0-ldhcp-server-lease-day-2-租约默认1" class="headerlink" title="[Huawei-G0/0/ ldhcp server lease day 2 //租约默认1"></a>[Huawei-G0/0/ ldhcp server lease day 2 //租约默认1</h1><h1 id="Huawei-G0-0-dhcp-server-excluded-ip-address192-168-1-1-192-168-1-10-排除IP范围"><a href="#Huawei-G0-0-dhcp-server-excluded-ip-address192-168-1-1-192-168-1-10-排除IP范围" class="headerlink" title="[Huawei-G0/0/]dhcp server excluded-ip-address192.168.1.1 192.168.1.10 //排除IP范围"></a>[Huawei-G0/0/]dhcp server excluded-ip-address192.168.1.1 192.168.1.10 //排除IP范围</h1><h1 id="Huawei-G0-0-1-dhcp-server-dns-list-8-8-8-8-DNS"><a href="#Huawei-G0-0-1-dhcp-server-dns-list-8-8-8-8-DNS" class="headerlink" title="[Huawei-G0/0/1]dhcp server dns-list 8.8.8.8 //DNS"></a>[Huawei-G0/0/1]dhcp server dns-list 8.8.8.8 //DNS</h1><h1 id="Huawei-dis-ip-pool-查看dhcp"><a href="#Huawei-dis-ip-pool-查看dhcp" class="headerlink" title="[Huawei]dis ip pool //查看dhcp"></a>[Huawei]dis ip pool //查看dhcp</h1><h3 id="13，配置路由器基本ACL：2000-2999"><a href="#13，配置路由器基本ACL：2000-2999" class="headerlink" title="13，配置路由器基本ACL：2000-2999"></a>13，配置路由器基本ACL：2000-2999</h3><h1 id="Huawei-acl-2000-配置基本acl"><a href="#Huawei-acl-2000-配置基本acl" class="headerlink" title="[Huawei]acl 2000 //配置基本acl"></a>[Huawei]acl 2000 //配置基本acl</h1><h1 id="Huawei-acl-basic-2000-rule-5-permit-source-1-1-1-1-0-允许源IP-注意反掩码0，默认步长5"><a href="#Huawei-acl-basic-2000-rule-5-permit-source-1-1-1-1-0-允许源IP-注意反掩码0，默认步长5" class="headerlink" title="[Huawei-acl-basic-2000]rule 5 permit source 1.1.1.1  0  //允许源IP(注意反掩码0，默认步长5)"></a>[Huawei-acl-basic-2000]rule 5 permit source 1.1.1.1  0  //允许源IP(注意反掩码0，默认步长5)</h1><h1 id="Huawei-acl-basic-2000-rule-10-deny-any-拒绝任意"><a href="#Huawei-acl-basic-2000-rule-10-deny-any-拒绝任意" class="headerlink" title="[Huawei-acl-basic-2000]rule 10 deny any //拒绝任意"></a>[Huawei-acl-basic-2000]rule 10 deny any //拒绝任意</h1><h1 id="Huawei-user-interface-vty-04-进入虚拟接口-（g0-0-0物理口）"><a href="#Huawei-user-interface-vty-04-进入虚拟接口-（g0-0-0物理口）" class="headerlink" title="[Huawei]user-interface vty 04 //进入虚拟接口   （g0/0/0物理口）"></a>[Huawei]user-interface vty 04 //进入虚拟接口   （g0/0/0物理口）</h1><h1 id="Huawei-ui-vty0-4-acl-2000-inbound-应用acl中93"><a href="#Huawei-ui-vty0-4-acl-2000-inbound-应用acl中93" class="headerlink" title="[Huawei-ui-vty0-4]acl 2000 inbound //应用acl中93"></a>[Huawei-ui-vty0-4]acl 2000 inbound //应用acl中93</h1><h1 id="Huawei-dis-acl-all-查看所有acl"><a href="#Huawei-dis-acl-all-查看所有acl" class="headerlink" title="[Huawei]dis acl all //查看所有acl"></a>[Huawei]dis acl all //查看所有acl</h1><h1 id="Huawei-dis-acl-2000-查看acl-2000"><a href="#Huawei-dis-acl-2000-查看acl-2000" class="headerlink" title="[Huawei]dis acl 2000 //查看acl 2000"></a>[Huawei]dis acl 2000 //查看acl 2000</h1><h3 id="14，配置路由器高级ACL：3000-3999"><a href="#14，配置路由器高级ACL：3000-3999" class="headerlink" title="14，配置路由器高级ACL：3000-3999"></a>14，配置路由器高级ACL：3000-3999</h3><h1 id="Huawei-acl-3000-配置高级acl"><a href="#Huawei-acl-3000-配置高级acl" class="headerlink" title="[Huawei]acl 3000 //配置高级acl"></a>[Huawei]acl 3000 //配置高级acl</h1><h1 id="Huawei-acl-adv-3000-rule-permit-ip-source-1-1-1-1-0-destination-4-4-4-4-0-允许访问"><a href="#Huawei-acl-adv-3000-rule-permit-ip-source-1-1-1-1-0-destination-4-4-4-4-0-允许访问" class="headerlink" title="[Huawei-acl-adv-3000]rule permit ip source 1.1.1.1  0   destination 4.4.4.4 0 //允许访问"></a>[Huawei-acl-adv-3000]rule permit ip source 1.1.1.1  0   destination 4.4.4.4 0 //允许访问</h1><h1 id="Huawei-user-interface-vty-04-进入虚拟接口"><a href="#Huawei-user-interface-vty-04-进入虚拟接口" class="headerlink" title="[Huawei]user-interface vty 04 //进入虚拟接口"></a>[Huawei]user-interface vty 04 //进入虚拟接口</h1><h1 id="Huawei-ui-vty0-4-acl-3000-outbound-应用acl"><a href="#Huawei-ui-vty0-4-acl-3000-outbound-应用acl" class="headerlink" title="[Huawei-ui-vty0-4]acl 3000 outbound //应用acl"></a>[Huawei-ui-vty0-4]acl 3000 outbound //应用acl</h1><h1 id="Huawei-int-g0-0-1-进入接口-1"><a href="#Huawei-int-g0-0-1-进入接口-1" class="headerlink" title="[Huawei]int g0/0/1 //进入接口"></a>[Huawei]int g0/0/1 //进入接口</h1><h1 id="Huawei-G0-0-1-traffic-filter-inbound-acl-3000-应用"><a href="#Huawei-G0-0-1-traffic-filter-inbound-acl-3000-应用" class="headerlink" title="[Huawei-G0/0/1]traffic-filter inbound acl 3000 //应用"></a>[Huawei-G0/0/1]traffic-filter inbound acl 3000 //应用</h1><h1 id="Huawei-dis-acl-all-查看所有acl-1"><a href="#Huawei-dis-acl-all-查看所有acl-1" class="headerlink" title="[Huawei]dis acl all //查看所有acl"></a>[Huawei]dis acl all //查看所有acl</h1><p># </p>
+<h3 id="15，配置路由器动态NAT：（多对少）"><a href="#15，配置路由器动态NAT：（多对少）" class="headerlink" title="15，配置路由器动态NAT：（多对少）"></a>15，配置路由器动态NAT：（多对少）</h3><h1 id="Huawei-nat-address-group-1-202-169-10-50-202-169-10-60-7-外部IP"><a href="#Huawei-nat-address-group-1-202-169-10-50-202-169-10-60-7-外部IP" class="headerlink" title="[Huawei]nat address-group 1  202.169.10.50    202.169.10.60 7   //外部IP"></a>[Huawei]nat address-group 1  202.169.10.50    202.169.10.60 7   //外部IP</h1><h1 id="Huawei-acl-2001-配置ACL"><a href="#Huawei-acl-2001-配置ACL" class="headerlink" title="[Huawei]acl 2001 //配置ACL"></a>[Huawei]acl 2001 //配置ACL</h1><h1 id="Huawei-acl-basic-2001-rule-5-permit-source-172-17-1-0-0-0-0-255-内部IP"><a href="#Huawei-acl-basic-2001-rule-5-permit-source-172-17-1-0-0-0-0-255-内部IP" class="headerlink" title="[Huawei-acl-basic-2001]rule 5 permit source 172.17.1.0    0.0.0.255 //内部IP"></a>[Huawei-acl-basic-2001]rule 5 permit source 172.17.1.0    0.0.0.255 //内部IP</h1><h1 id="Huawei-int-g0-0-1-进入接口-2"><a href="#Huawei-int-g0-0-1-进入接口-2" class="headerlink" title="[Huawei]int g0/0/1 //进入接口"></a>[Huawei]int g0/0/1 //进入接口</h1><h1 id="Huawei-GigabitEthernet0-0-0-nat-outbound-2001-address-group-1-no-pat-应用NAT"><a href="#Huawei-GigabitEthernet0-0-0-nat-outbound-2001-address-group-1-no-pat-应用NAT" class="headerlink" title="[Huawei-GigabitEthernet0/0/0]nat outbound 2001 address-group 1 no-pat //应用NAT"></a>[Huawei-GigabitEthernet0/0/0]nat outbound 2001 address-group 1 no-pat //应用NAT</h1><h1 id="Huawei-dis-nat-outbound-查看NAT"><a href="#Huawei-dis-nat-outbound-查看NAT" class="headerlink" title="[Huawei]dis nat outbound //查看NAT"></a>[Huawei]dis nat outbound //查看NAT</h1><p># </p>
+<h3 id="16，配置路由器静态NAT：-一对一"><a href="#16，配置路由器静态NAT：-一对一" class="headerlink" title="16，配置路由器静态NAT：(一对一)"></a>16，配置路由器静态NAT：(一对一)</h3><h1 id="Huawei-int-g0-0-1-进入接口-3"><a href="#Huawei-int-g0-0-1-进入接口-3" class="headerlink" title="[Huawei]int g0/0/1      //进入接口"></a>[Huawei]int g0/0/1      //进入接口</h1><h1 id="Huawei-GigabitEthernet0-0-1-nat-static-global-202-169-10-5-inside-172-16-1-1-一对一转换"><a href="#Huawei-GigabitEthernet0-0-1-nat-static-global-202-169-10-5-inside-172-16-1-1-一对一转换" class="headerlink" title="[Huawei-GigabitEthernet0/0/1]nat static global  202.169.10.5 inside 172.16.1.1 //一对一转换"></a>[Huawei-GigabitEthernet0/0/1]nat static global  202.169.10.5 inside 172.16.1.1 //一对一转换</h1><h3 id="17，配置路由器动态NAPT：-多对一"><a href="#17，配置路由器动态NAPT：-多对一" class="headerlink" title="17，配置路由器动态NAPT：(多对一)"></a>17，配置路由器动态NAPT：(多对一)</h3><h1 id="Huawei-int-g0-0-0-进入接口"><a href="#Huawei-int-g0-0-0-进入接口" class="headerlink" title="[Huawei]int g0/0/0 //进入接口"></a>[Huawei]int g0/0/0 //进入接口</h1><h1 id="Huawei-G0-0-0-nat-outbound-2001-多对一转接"><a href="#Huawei-G0-0-0-nat-outbound-2001-多对一转接" class="headerlink" title="[Huawei-G0/0/0]nat outbound 2001 //多对一转接"></a>[Huawei-G0/0/0]nat outbound 2001 //多对一转接</h1><h1 id="Huawei-dis-nat-static-查看静态NAT"><a href="#Huawei-dis-nat-static-查看静态NAT" class="headerlink" title="[Huawei]dis nat static //查看静态NAT"></a>[Huawei]dis nat static //查看静态NAT</h1><h3 id="18，配置三层交换机VLAN间路由："><a href="#18，配置三层交换机VLAN间路由：" class="headerlink" title="18，配置三层交换机VLAN间路由："></a>18，配置三层交换机VLAN间路由：</h3><h2 id="首先基本配置，IP、VLAN等。"><a href="#首先基本配置，IP、VLAN等。" class="headerlink" title="首先基本配置，IP、VLAN等。"></a>首先基本配置，IP、VLAN等。</h2><h1 id="Huaweijint-vlanif-10-进入接口"><a href="#Huaweijint-vlanif-10-进入接口" class="headerlink" title="[Huaweijint vlanif 10 //进入接口"></a>[Huaweijint vlanif 10 //进入接口</h1><h1 id="Huawei-Vlanif10jip-add-192-168-1-254-24-配IP"><a href="#Huawei-Vlanif10jip-add-192-168-1-254-24-配IP" class="headerlink" title="[Huawei-Vlanif10jip add 192.168.1.254 24 //配IP"></a>[Huawei-Vlanif10jip add 192.168.1.254 24 //配IP</h1><h1 id="Huawei-int-vlanif-20-进入接口"><a href="#Huawei-int-vlanif-20-进入接口" class="headerlink" title="[Huawei]int vlanif 20 //进入接口"></a>[Huawei]int vlanif 20 //进入接口</h1><h1 id="Huawei-Vlanif20-ip-add-192-168-2-254-24-配IP"><a href="#Huawei-Vlanif20-ip-add-192-168-2-254-24-配IP" class="headerlink" title="[Huawei-Vlanif20]ip add 192.168.2.254 24 //配IP"></a>[Huawei-Vlanif20]ip add 192.168.2.254 24 //配IP</h1><h1 id="Huawei-dis-ip-interface-brief-接口简略信息"><a href="#Huawei-dis-ip-interface-brief-接口简略信息" class="headerlink" title="[Huawei]dis ip interface brief //接口简略信息"></a>[Huawei]dis ip interface brief //接口简略信息</h1><h1 id="Huawei-dis-port-vlan-接口vlan信息"><a href="#Huawei-dis-port-vlan-接口vlan信息" class="headerlink" title="[Huawei]dis port vlan //接口vlan信息"></a>[Huawei]dis port vlan //接口vlan信息</h1><h1 id="Huawei-dis-vlan-查看vlan信息。"><a href="#Huawei-dis-vlan-查看vlan信息。" class="headerlink" title="[Huawei]dis vlan //查看vlan信息。"></a>[Huawei]dis vlan //查看vlan信息。</h1><h3 id="19，配置单臂路由VLAN间通信："><a href="#19，配置单臂路由VLAN间通信：" class="headerlink" title="19，配置单臂路由VLAN间通信："></a>19，配置单臂路由VLAN间通信：</h3><h2 id="首先基本配置，IP、VLAN等。-1"><a href="#首先基本配置，IP、VLAN等。-1" class="headerlink" title="首先基本配置，IP、VLAN等。"></a>首先基本配置，IP、VLAN等。</h2><h1 id="Huawei-G0-0-1-1-ip-add-192-168-1-254-24-配置IP"><a href="#Huawei-G0-0-1-1-ip-add-192-168-1-254-24-配置IP" class="headerlink" title="[Huawei-G0/0/1.1]ip add 192.168.1.254 24 //配置IP"></a>[Huawei-G0/0/1.1]ip add 192.168.1.254 24 //配置IP</h1><h1 id="Huawei-G0-0-1-1-dot1q-termination-vid-10-封装"><a href="#Huawei-G0-0-1-1-dot1q-termination-vid-10-封装" class="headerlink" title="[Huawei-G0/0/1.1]dot1q termination vid 10 //封装"></a>[Huawei-G0/0/1.1]dot1q termination vid 10 //封装</h1><h1 id="Huawei-G0-0-1-1-arp-broadcast-enable-开启arp"><a href="#Huawei-G0-0-1-1-arp-broadcast-enable-开启arp" class="headerlink" title="[Huawei-G0/0/1.1]arp broadcast enable //开启arp"></a>[Huawei-G0/0/1.1]arp broadcast enable //开启arp</h1><h1 id="Huawei-dis-ip-interface-brief-查看接口"><a href="#Huawei-dis-ip-interface-brief-查看接口" class="headerlink" title="[Huawei]dis ip interface brief //查看接口"></a>[Huawei]dis ip interface brief //查看接口</h1><h1 id="Huawei-dis-ip-routing-table-查看路由表-1"><a href="#Huawei-dis-ip-routing-table-查看路由表-1" class="headerlink" title="[Huawei]dis ip routing-table //查看路由表"></a>[Huawei]dis ip routing-table //查看路由表</h1><h1 id="Huawei-display-current-configuration-查看配置"><a href="#Huawei-display-current-configuration-查看配置" class="headerlink" title="[Huawei]display current-configuration //查看配置"></a>[Huawei]display current-configuration //查看配置</h1>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/images/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="/images/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2022/04/10/[极客大挑战 2019]Http/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/esireda/tupian/110201-149931012162c4.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/esireda/tupian/110201-149931012162c4.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                极客大挑战 2019（Http）</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2022/03/20/网工拓扑全网通操作/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/esireda/tupian/000055-16299072552135.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/esireda/tupian/000055-16299072552135.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                网工拓扑图，实现主机互联</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="eriseda" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">eriseda</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 eriseda<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/esireda/tupian/111.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">小记同学eriseda</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/eriseda" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/ctf/">
+                  <i class="fa fa-solid fa-gamepad" aria-hidden="true"></i>
+                  ctf
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/docker/">
+                  <i class="fa fa-brands fa-docker" aria-hidden="true"></i>
+                  docker
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/漏洞/">
+                  <i class="fa fa-solid fa-bug" aria-hidden="true"></i>
+                  漏洞
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/python/">
+                  <i class="fa python" aria-hidden="true"></i>
+                  python
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/学习/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  学习
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/client/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+            客户端
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
