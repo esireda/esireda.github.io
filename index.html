@@ -60,6 +60,8 @@
   <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
   </style>
 </head>
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/hititle.js"></script>
+
 </html>
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
   <div class="scrollbar" id="bar">
@@ -93,20 +95,23 @@
               
             
               
-                <li>
-                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="social-github" title="QQ">
-                    <img src="/images/social/2.png">
-                  </a>
-                </li>
-              
-            
-              
                 <li class="wechat">
                   <a href="/#">
                     <img src="/images/social/3.png">
                   </a>
                   <div class="wechatInner">
                     <img src="/images/social/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="/images/social/2.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="/images/social/qq.jpg">
                   </div>
                 </li>
               
@@ -854,6 +859,58 @@
     </div>
   </div>
 </footer> -->
+
+
+  <!--壁纸切换-->
+  <div class="skin-menu no-select" id="mainskin"  style="position: fixed">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="font-family-controls row-container">
+        <button type="button" class="control-btn-serif selected" data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button>
+        <button type="button" class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans Serif</button>
+    </div>
+  </div>   
+  <canvas id="night-mode-cover"></canvas> 
+    <div class="changeSkin-gear no-select">
+      <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换壁纸
+        &nbsp;<i class="iconfont icon-gear inline-block rotating"></i> </span></div>
+  </div><!--skin.end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <footer id="colophon" class="site-footer" role="contentinfo">
   <div class="site-info">
     <div class="footertext">
