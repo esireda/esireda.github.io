@@ -302,15 +302,15 @@
   </entry>
   
   <entry>
-    <title>sqlmap的使用方法</title>
-    <link href="/2021/11/01/sqlmap/"/>
-    <id>/2021/11/01/sqlmap/</id>
+    <title>sqllab关卡以及相关知识</title>
+    <link href="/2021/11/01/sql/"/>
+    <id>/2021/11/01/sql/</id>
     <published>2021-11-01T08:00:00.000Z</published>
-    <updated>2023-04-14T15:48:17.696Z</updated>
+    <updated>2023-04-14T15:47:48.922Z</updated>
     
     <summary type="html">
     
-      sqlmap的一些命令
+      sqllab
     
     </summary>
     
@@ -322,15 +322,15 @@
   </entry>
   
   <entry>
-    <title>sqllab关卡以及相关知识</title>
-    <link href="/2021/11/01/sql/"/>
-    <id>/2021/11/01/sql/</id>
+    <title>sqlmap的使用方法</title>
+    <link href="/2021/11/01/sqlmap/"/>
+    <id>/2021/11/01/sqlmap/</id>
     <published>2021-11-01T08:00:00.000Z</published>
-    <updated>2023-04-14T15:47:48.922Z</updated>
+    <updated>2023-04-14T15:48:17.696Z</updated>
     
     <summary type="html">
     
-      sqllab
+      sqlmap的一些命令
     
     </summary>
     
